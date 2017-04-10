@@ -10,7 +10,6 @@ object dmPrincipal: TdmPrincipal
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')
-    Connected = True
     LoginPrompt = False
     BeforeConnect = conPrincipalBeforeConnect
     Left = 104
