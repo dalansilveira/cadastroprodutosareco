@@ -82,7 +82,6 @@ object FrmCadProdutos: TFrmCadProdutos
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 578
   end
   object tlbProdutos: TToolBar
     Left = 0
@@ -93,7 +92,6 @@ object FrmCadProdutos: TFrmCadProdutos
     ButtonWidth = 89
     Caption = 'tlbProdutos'
     TabOrder = 1
-    ExplicitTop = 42
     object btnVoltar: TSpeedButton
       Left = 0
       Top = 0
@@ -127,58 +125,55 @@ object FrmCadProdutos: TFrmCadProdutos
       OnClick = btnExcluirClick
     end
   end
-  object edtNOME: TDBEdit
+  object edtNOME: TEdit
     Left = 40
     Top = 140
     Width = 377
     Height = 21
-    DataField = 'NOME'
-    DataSource = dmPrincipal.dsProdutos
     TabOrder = 2
   end
-  object edtVALOR_CUSTO: TDBEdit
+  object edtVALOR_CUSTO: TEdit
     Left = 40
     Top = 180
     Width = 174
     Height = 21
-    DataField = 'VALOR_CUSTO'
-    DataSource = dmPrincipal.dsProdutos
     TabOrder = 3
   end
-  object edtVALOR_VENDA: TDBEdit
+  object edtVALOR_VENDA: TEdit
     Left = 40
     Top = 220
     Width = 174
     Height = 21
-    DataField = 'VALOR_VENDA'
-    DataSource = dmPrincipal.dsProdutos
     TabOrder = 4
   end
-  object edtESTOQUE: TDBEdit
+  object edtESTOQUE: TSpinEdit
     Left = 432
     Top = 140
     Width = 95
-    Height = 21
-    DataField = 'ESTOQUE'
-    DataSource = dmPrincipal.dsProdutos
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
     TabOrder = 5
+    Value = 0
   end
-  object edtESTOQUE_MINIMO: TDBEdit
+  object edtESTOQUE_MINIMO: TSpinEdit
     Left = 432
     Top = 180
     Width = 95
-    Height = 21
-    DataField = 'ESTOQUE_MINIMO'
-    DataSource = dmPrincipal.dsProdutos
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
     TabOrder = 6
+    Value = 0
   end
-  object edtESTOQUE_CRITICO: TDBEdit
+  object edtESTOQUE_CRITICO: TSpinEdit
     Left = 432
     Top = 220
     Width = 95
-    Height = 21
-    DataField = 'ESTOQUE_CRITICO'
-    DataSource = dmPrincipal.dsProdutos
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
     TabOrder = 7
+    Value = 0
   end
 end

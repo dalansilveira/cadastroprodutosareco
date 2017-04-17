@@ -15,64 +15,51 @@ object FrmMain: TFrmMain
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object gridProdutos: TDBGrid
-    Left = 0
-    Top = 0
-    Width = 754
-    Height = 416
-    Align = alClient
-    DataSource = dmPrincipal.dsListagemProdutos
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
-    ParentFont = False
-    ReadOnly = True
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-    OnDblClick = gridProdutosDblClick
-    OnKeyDown = gridProdutosKeyDown
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'NOME'
-        Width = 359
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'VALOR_CUSTO'
-        Width = 115
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'VALOR_VENDA'
-        Width = 111
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'ESTOQUE'
-        Width = 106
-        Visible = True
-      end>
-  end
   object statMain: TStatusBar
     Left = 0
     Top = 416
     Width = 754
     Height = 19
     Panels = <>
-    ExplicitLeft = 336
-    ExplicitTop = 224
-    ExplicitWidth = 0
+  end
+  object lvProdutos: TListView
+    Left = 0
+    Top = 0
+    Width = 754
+    Height = 416
+    Align = alClient
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BorderStyle = bsNone
+    Columns = <
+      item
+        AutoSize = True
+        Caption = 'Nome'
+      end
+      item
+        AutoSize = True
+        Caption = 'Valor Venda'
+      end
+      item
+        AutoSize = True
+        Caption = 'Estoque'
+      end>
+    DoubleBuffered = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    GridLines = True
+    ReadOnly = True
+    RowSelect = True
+    ParentDoubleBuffered = False
+    ParentFont = False
+    TabOrder = 1
+    ViewStyle = vsReport
+    OnDblClick = lvProdutosDblClick
+    OnKeyDown = lvProdutosKeyDown
+    ExplicitTop = -6
   end
   object mmPrincipal: TMainMenu
     Left = 592
@@ -100,6 +87,13 @@ object FrmMain: TFrmMain
       object ExcluirProdutos: TMenuItem
         Caption = '&Excluir'
         OnClick = ExcluirProdutosClick
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object AtualizarLista: TMenuItem
+        Caption = 'Atualizar'
+        OnClick = AtualizarListaClick
       end
     end
     object MenuAjuda: TMenuItem
